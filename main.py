@@ -3,7 +3,7 @@ from pathlib import Path
 import json
 from fastmcp import FastMCP
 
-DB_PATH = Path("expense2.db")
+DB_PATH = Path(__file__).parent / "expense2.db"
 
 async def init_db():
     async with aiosqlite.connect(DB_PATH) as conn:
